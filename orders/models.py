@@ -9,6 +9,7 @@ class Order(models.Model):
     address =  models.CharField(verbose_name='Адрес', max_length=250)
     postal_code = models.CharField(verbose_name='Почтовый код', max_length=20)
     city = models.CharField(verbose_name='Город', max_length=100)
+    telephone = models.CharField(verbose_name='Телефон', max_length=20, default='+79672473953')	
     created = models.DateTimeField(verbose_name='Создан', auto_now_add=True)
     updated = models.DateTimeField(verbose_name='Обновлен', auto_now=True)
     paid = models.BooleanField(verbose_name='Оплачен', default=False)
